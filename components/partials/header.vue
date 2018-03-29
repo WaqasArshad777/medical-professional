@@ -18,7 +18,7 @@
                     <ul class="nav navbar-nav navbar-center" >
                        <li v-for="navElement in nav.metafields" :key="navElement.id">
                            <nuxt-link v-if="!navElement.children" :to="navElement.value">{{navElement.title}}</nuxt-link>
-                           <a v-else class="dropdown-toggle" data-toggle="dropdown" href="#">{{navElement.title}}<span class="caret"></span></a>
+                                <a v-else class="dropdown-toggle" data-toggle="dropdown" href="#">{{navElement.title}}<span class="caret"></span></a>
                                 <ul class="dropdown-menu">
                                     <li v-for="e in navElement.children" :key="e.id">
                                         <nuxt-link :to="e.value">{{e.title}}</nuxt-link>
